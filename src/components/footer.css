@@ -1,0 +1,54 @@
+/* Ensure the body and content flow normally */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: block;
+}
+
+/* Main page container for content */
+.page-container {
+    display: block;
+    position: relative;
+    padding-bottom: 60px; /* Reserve space for the footer */
+    min-height: 100%;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative; /* Static position by default */
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}

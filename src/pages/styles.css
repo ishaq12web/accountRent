@@ -1,0 +1,164 @@
+nav {
+    background-color: #333; /* Dark background */
+    padding: 10px 0; /* Top and bottom padding */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: #fff; /* White text */
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #007bff; /* Blue on hover */
+  }
+  
+  * {box-sizing: border-box}
+  body { font-family: Verdana, sans-serif; margin:0}
+  .mySlides {display: none}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px; /* Width of the slides */
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next" button to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a grey background color */
+  .prev:hover, .next:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  /* The dots/bullets */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+  
+  /* Active dot */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading effect */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* Add some padding to the slides */
+  .slide {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: space-between; /* Evenly distribute items */
+    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Adjust width as needed */
+  }
+  
+  .item {
+    width: 30%; /* Adjust width based on desired number of cards per row */
+    background-color: #f1f1f1; /* Light background color */
+    margin: 10px; /* Add some spacing between cards */
+    padding: 15px; /* Add some padding within cards */
+    text-align: center; /* Center content within cards */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .item img {
+    display: block; /* Ensure image fills its container */
+    margin: 0 auto; /* Center image horizontally */
+    width: 100%; /* Make image fit the card width */
+  }
+  
+  .item h3 {
+    margin: 10px 0; /* Add some space above and below heading */
+  }
+  
+  .footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center content horizontally */
+    padding: 20px 0; /* Top and bottom padding */
+  }
+  
+  .footer-content {
+    max-width: 960px; /* Limit width for better responsiveness */
+    margin: 0 auto; /* Center horizontally within its container */
+  }
+  
+  nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display list items horizontally */
+    justify-content: center; /* Center list items horizontally */
+    padding: 0; /* Remove default padding */
+  }
+  
+  nav li {
+    margin: 0 15px; /* Add spacing between list items */
+  }
+  
+  nav a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  nav a:hover {
+    color: #007bff; /* Change color on hover (optional) */
+  }

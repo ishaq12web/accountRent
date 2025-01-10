@@ -1,0 +1,98 @@
+/* Container styling */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle buttons */
+.toggle-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-btns button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle-btns button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.toggle-btns .active-btn {
+    background-color: #3e8e41;
+    font-weight: bold;
+    transform: translateY(0);
+}
+
+/* Page content */
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+/* Transaction history */
+.transaction-history {
+    margin-top: 0px;
+}
+
+.transaction-history h3 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .toggle-btns button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    th, td {
+        font-size: 12px;
+    }
+}

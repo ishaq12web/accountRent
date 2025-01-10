@@ -1,0 +1,88 @@
+.container {
+    background-color: #fff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 120px;
+    margin: 0;
+    color: #e74c3c;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.home-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.home-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.image-container {
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Add subtle animation to the container */
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .home-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
