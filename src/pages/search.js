@@ -1,5 +1,6 @@
 import "./search.css";
 import SearchBar from "../components/search";
+import { useNavigate } from 'react-router-dom';
 
 function SearchPage() {
     const items = [
@@ -11,17 +12,25 @@ function SearchPage() {
         },
         {
             id: 2,
-            title: "Netflix",
-            price: "1000 naira",
+            title: "Net",
+            price: "105 naira",
             imgSrc: "https://via.placeholder.com/150",
         },
         {
             id: 3,
-            title: "Netflix",
-            price: "1000 naira",
+            title: "prime",
+            price: "10 naira",
             imgSrc: "https://via.placeholder.com/150",
         },
     ];
+
+        // Navigate
+  const navigate = useNavigate();
+
+  const handleNavigate = (item) => {
+    navigate('/card', { state: { title: item.title, price: item.price } });
+    console.log(item)
+  };
 
     return (
         <div className="search-page">
@@ -34,7 +43,9 @@ function SearchPage() {
                     <div className="item" key={item.id}>
                         <img src={item.imgSrc} alt={`${item.title} logo`} />
                         <h3>{item.title}</h3>
-                        <p>{item.price}</p>
+                        <p>${item.price}</p>
+                        <button className="rent-button" onClick={() => handleNavigate(item)}>Rent Now</button>
+                       
                     </div>
                 ))}
             </div>

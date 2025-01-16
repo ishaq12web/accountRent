@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import SearchBar from '../components/search';
 import './market.css';
+import { useNavigate } from 'react-router-dom';
 
 function Market() {
+
+    // Navigate
+  const navigate = useNavigate();
+
+  const handleNavigate = (account) => {
+    navigate('/card', { state: { title: account.title, price: account.price } });
+    console.log(account);
+  };
+
     const accountData = [
         {
             title: "Gaming Account",
@@ -63,7 +73,7 @@ function Market() {
         <div className="market-container">
             <SearchBar/>
             <h1>Account Rental Marketplace</h1>
-            <div className="marketplace">
+            <div className="marketplace" id='card'>
                 {visibleAccounts.map((account, index) => (
                     <div key={index} className="account-card">
                         <img src={account.imgSrc} alt={`${account.title} Image`} />
@@ -75,12 +85,12 @@ function Market() {
                         <div className="card-footer">
                             <div className="price">{account.price}</div>
                             <div className="days">{account.days}</div>
-                            <button className="rent-button">Rent Now</button>
+                            <button className="rent-button"  onClick={() => handleNavigate(account)}>Rent Now</button>
                         </div>
                     </div>
                 ))}
             </div>
-
+                
             {/* Pagination Controls */}
             <div className="pagination">
                 <button

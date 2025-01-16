@@ -49,6 +49,8 @@ function Home() {
                     {slides.map((_, index) => (
                         <span
                             key={index}
+                            data-testid="dot"
+                            role="button"
                             className={`dot ${index === currentSlide ? "active" : ""}`}
                             onClick={() => changeSlide(index)}
                         ></span>

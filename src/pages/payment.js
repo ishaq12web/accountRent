@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./payment.css";
+import { useLocation } from 'react-router-dom';
+
 function PaymentPage() {
   const [paymentMethod, setPaymentMethod] = useState("card");
-  const [totalAmount, setTotalAmount] = useState(100);  // Example total amount
   const [cardNumber, setCardNumber] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
   const [cvv, setCvv] = useState("");
@@ -16,6 +17,13 @@ function PaymentPage() {
     // For demo purposes, we just show a success message
     setIsPaymentSuccessful(true);
   };
+  
+  const location = useLocation();
+  const { price } = location.state || {};
+  const totalAmount = price || 100; // Default to 100 if no price provided
+
+
+  
 
   return (
     <section className="payment-page">
@@ -25,8 +33,7 @@ function PaymentPage() {
 
         <div className="payment-summary">
           <h2>Order Summary</h2>
-          <p><strong>Total Amount:</strong> ${totalAmount}</p>
-        </div>
+          <p><strong>Total Amount:</strong> {totalAmount}</p>        </div>
 
         {/* Payment Method Selection */}
         <div className="payment-method-selection">
@@ -167,7 +174,7 @@ function PaymentPage() {
               </select>
             </div>
 
-            <button type="submit" className="pay-btn">Pay with Crypto</button>
+            <button type="submit" className="pay-btn" >Pay with Crypto</button>
           </form>
         )}
 
